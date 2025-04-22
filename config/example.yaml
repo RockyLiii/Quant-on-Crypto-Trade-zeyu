@@ -1,0 +1,32 @@
+# 数据相关配置
+data_dir: "data/5m_klines"             # 文件夹路径（小量测试）
+file_suffix: "_klines_5m.csv"          # 文件后缀
+min_csv_length: 66666                  # 最小 CSV 行数
+
+# 回归与策略参数
+window_size: 144                        
+# 回归窗口长度，                                                36 72 144 288
+# 回溯步数  = 4 * window_size
+# 窗口相关性长度 = 12 * window_size
+# corr_day = window_size / 12
+                                                              
+corr_ave_threshold: 0.4                # 相关性阈值             0.3 0.4
+
+thres: 2.5                             # 偏离 sigma 倍数        2 2.25 2.5 2.75
+
+hold_time: 30                          # 持有时间               10 30 60
+
+zs: -0.03                              # 止损点
+std_max_threshold: 0.1                 # 标准差最大阈值
+
+
+fee: 0.001                             # 手续费
+
+
+# 可视化与输出设置
+visualize_input: true                  # 可视化输入数据
+visualize_statics: true                # 可视化中间数据
+visualize_output: true                 # 可视化输出数据
+
+# 输出设置
+output_path: "output"                  # 输出路径
