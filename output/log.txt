@@ -1312,3 +1312,49 @@ Name: avg_correlation, dtype: float64
 4 2024-06-07 18:15:00  PEPE  [[0.7617258718976375]]   1.038870    1.172613        -1  [[[0.01040433414214579]], [[0.0077024795110201...   [[0.01821612408842674]]
 2025-04-22 16:16:31,380 - src.utils.logger - INFO - 正在可视化输出结果
 2025-04-22 16:16:33,336 - src.utils.logger - INFO - 分析完成
+2025-04-23 00:59:20,343 - src.utils.logger - INFO - 正在从 data/5m_klines 读取K线数据
+2025-04-23 00:59:23,384 - src.utils.logger - INFO - 成功加载 17 个币种数据，正在合并
+2025-04-23 00:59:23,560 - src.utils.logger - INFO - 分析的币种: ['PEPE', 'AVAX', 'BTC', 'DOGE', 'WIF', 'BONK', 'ADA', 'SUI', 'SHIB', 'XLM', 'XRP', 'TRX', 'SOL', 'LINK', 'NOT', 'AAVE', 'ETH']
+2025-04-23 00:59:23,560 - src.utils.logger - INFO - 正在可视化输入数据
+2025-04-23 00:59:29,849 - src.utils.logger - INFO - 正在使用前一半数据进行分析
+2025-04-23 00:59:29,860 - src.utils.logger - INFO - 正在计算残差、beta系数和标准差
+2025-04-23 01:00:31,415 - src.utils.logger - INFO - 正在计算相关性
+2025-04-23 01:05:54,031 - src.utils.logger - INFO - 相关性DataFrame的类型: <class 'pandas.core.series.Series'>
+2025-04-23 01:05:54,034 - src.utils.logger - INFO - 相关性DataFrame的形状: (17037,)
+2025-04-23 01:05:54,039 - src.utils.logger - INFO - 相关性DataFrame的前几行:
+1728    1.0
+1729    1.0
+1730    1.0
+1731    1.0
+1732    1.0
+Name: avg_correlation, dtype: float64
+2025-04-23 01:05:54,039 - src.utils.logger - INFO - 正在可视化中间数据
+2025-04-23 01:05:57,716 - src.utils.logger - INFO - 正在过滤残差
+2025-04-23 01:05:59,362 - src.utils.logger - INFO - 过滤后的交易信号数量: {'PEPE': 28, 'AVAX': 26, 'DOGE': 75, 'WIF': 28, 'BONK': 16, 'ADA': 39, 'SUI': 18, 'SHIB': 59, 'XLM': 58, 'XRP': 19, 'TRX': 3, 'SOL': 57, 'LINK': 67, 'NOT': 32, 'AAVE': 19, 'ETH': 11}
+2025-04-23 01:05:59,362 - src.utils.logger - INFO - 正在计算收益
+2025-04-23 01:06:01,786 - src.utils.logger - INFO - 结果DataFrame的列: ['timestamp', 'coin', 'beta', 'BTC_price', 'coin_price', 'position', 'return_series', 'return_5steps']
+2025-04-23 01:06:01,786 - src.utils.logger - INFO - 结果DataFrame的形状: (555, 8)
+2025-04-23 01:06:01,807 - src.utils.logger - INFO - 结果DataFrame的前几行:
+            timestamp  ...             return_5steps
+0 2024-06-07 12:35:00  ...   [[0.01096394842536963]]
+1 2024-06-07 18:00:00  ...   [[0.03173738004447963]]
+2 2024-06-07 18:05:00  ...  [[-0.03568770895328052]]
+3 2024-06-07 18:10:00  ...   [[0.05495653769306226]]
+4 2024-06-07 18:15:00  ...   [[0.01821612408842674]]
+
+[5 rows x 8 columns]
+2025-04-23 01:06:01,807 - src.utils.logger - INFO - 正在可视化输出结果
+2025-04-23 01:06:03,280 - src.utils.logger - INFO - 分析完成
+2025-04-23 15:45:55,724 - src.utils.logger - INFO - 正在从 data/5m_klines 读取K线数据
+2025-04-23 15:46:00,218 - src.utils.logger - INFO - 成功加载 17 个币种数据，正在合并
+2025-04-23 15:46:00,523 - src.utils.logger - INFO - 分析的币种: ['PEPE', 'AVAX', 'BTC', 'DOGE', 'WIF', 'BONK', 'ADA', 'SUI', 'SHIB', 'XLM', 'XRP', 'TRX', 'SOL', 'LINK', 'NOT', 'AAVE', 'ETH']
+2025-04-23 15:46:00,524 - src.utils.logger - INFO - 正在可视化输入数据
+2025-04-23 15:46:09,979 - src.utils.logger - INFO - 正在使用前一半数据进行分析
+2025-04-23 15:46:10,014 - src.utils.logger - INFO - 正在计算残差、beta系数和标准差
+2025-04-23 22:28:55,940 - src.utils.logger - INFO - 正在从 data/5m_klines 读取K线数据
+2025-04-23 22:28:58,332 - src.utils.logger - INFO - 成功加载 17 个币种数据，正在合并
+2025-04-23 22:28:58,457 - src.utils.logger - INFO - 分析的币种: ['PEPE', 'AVAX', 'BTC', 'DOGE', 'WIF', 'BONK', 'ADA', 'SUI', 'SHIB', 'XLM', 'XRP', 'TRX', 'SOL', 'LINK', 'NOT', 'AAVE', 'ETH']
+2025-04-23 22:28:58,457 - src.utils.logger - INFO - 正在可视化输入数据
+2025-04-23 22:29:03,940 - src.utils.logger - INFO - 正在使用前一半数据进行分析
+2025-04-23 22:29:03,968 - src.utils.logger - INFO - 正在计算残差、beta系数和标准差
+2025-04-23 22:34:29,861 - src.utils.logger - INFO - 正在计算相关性

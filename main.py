@@ -50,7 +50,7 @@ def main():
     # Use first half of data for analysis
     logger.info("正在使用前一半数据进行分析")
 
-    df_all = df_all.iloc[:int(len(df_all) * 1/5)].reset_index(drop=True)
+    df_all = df_all.iloc[:int(len(df_all) * 1/2)].reset_index(drop=True)
 
     df_all = df_all.sort_values('timestamp').reset_index(drop=True)
     
